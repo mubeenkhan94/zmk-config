@@ -30,16 +30,16 @@
    &kp Q      &kp W      &kp F       &kp P        &kp B     &kp J       &kp L         &kp U       &kp Y      &kp SEMI
    &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T  &lt NAV G &kp M       &hm RSHFT N   &hm RCTRL E &hm RALT I &hm RGUI O
    &kp Z      &kp X      &kp C       &kp D        &kp V     &kp K       &kp H         &kp COMMA   &kp DOT    &kp FSLH
-                         &kp ESC     &lt NAV BSPC &kp TAB   &lt SYM RET &lt NUM SPACE &kp FUN DEL
+                         &kp ESC     &lt NAV BSPC &kp TAB   &lt SYM RET &lt NUM SPACE &lt FUN DEL
                         >;
                 };
 
                 nav_layer {
                         bindings = <
-   &bt BT_CLR &trans   &trans    &trans    &trans  &kp K_REDO &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE
-   &kp LGUI   &kp LALT &kp LCTRL &kp LSHFT &trans  &kp CAPS   &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT
-   &trans     &trans   &trans    &trans    &trans  &kp INS    &kp HOME   &kp PG_UP &kp PG_DN  &kp END
-                       &trans    &trans    &trans  &kp RET    &kp BSPC   &kp DEL
+   &trans   &trans   &trans    &trans    &trans  &kp K_REDO &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE
+   &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans  &kp CAPS   &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT
+   &trans   &trans   &trans    &trans    &trans  &kp INS    &kp HOME   &kp PG_UP &kp PG_DN  &kp END
+                     &trans    &trans    &trans  &kp RET    &kp BSPC   &kp DEL
                         >;
                 };
 
