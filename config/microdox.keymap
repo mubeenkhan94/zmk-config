@@ -18,8 +18,8 @@
                     quick_tap_ms = <0>;            
                     flavor = "tap-preferred";            
                     bindings = <&kp>, <&kp>;
+                };    
         };
-
         keymap {
                 compatible = "zmk,keymap";
 
@@ -61,10 +61,10 @@
 
                 fun_layer {
                         bindings = <
-   &kp F12 &kp F7 &kp F8    &kp F9    &kp PSCRN       &trans &trans    &trans    &trans   &trans
-   &kp F11 &kp F4 &kp F5    &kp F6    &kp SLCK        &trans &kp RSHFT &kp RCTRL &kp RALT &kp RGUI
-   &kp F10 &kp F1 &kp F2    &kp F3    &kp PAUSE_BREAK &trans &trans    &trans    &trans   &kp BSLH
-                  &kp K_APP &kp SPACE &kp TAB         &trans &trans    &trans
+   &kp F12 &kp F7 &kp F8 &kp F9    &kp PSCRN       &trans &trans    &trans    &trans   &trans
+   &kp F11 &kp F4 &kp F5 &kp F6    &kp SLCK        &trans &kp RSHFT &kp RCTRL &kp RALT &kp RGUI
+   &kp F10 &kp F1 &kp F2 &kp F3    &kp PAUSE_BREAK &trans &trans    &trans    &trans   &kp BSLH
+                  &trans &kp SPACE &kp TAB         &trans &trans    &trans
                         >;
                 };
         };
