@@ -14,41 +14,58 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L  |  U  |  Y  |  ;  |
-// |  A  |  R  |  S  |  F  |  G  |   |  M  |  N  |  E  |  I  |  O  |
-// |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H  |  ,  |  .  |  /  |
-//             | ESC | NAV | TAB |   | FUN | NUM | DEL |
+// |  Q  |  W  |  E  |  R  |  T   |   |  Y  |  U   |  I  |  O  |  P  |
+// |  A  |  S  |  D  |  F  |  G   |   |  H  |  J   |  K  |  L  |  ;  |
+// |  Z  |  X  |  C  |  V  |  B   |   |  N  |  M   |  ,  |  .  |  /  |
+//             | GUI | NAV | SHFT |   | SPC | SYM  | ALT |
                         bindings = <
-   &kp Q       &kp W       &kp F       &kp P       &kp B    &kp J      &kp L       &kp U       &kp Y       &kp SCLN
-   &hm LGUI A  &hm LALT R  &hm LCTL S  &hm LSFT T  &kp G    &kp M      &hm RSFT N  &hm RCTL E  &hm RALT I  &hm RGUI O
-   &kp Z       &kp X       &kp C       &kp D       &kp V    &kp K      &kp H       &kp CMMA    &kp DOT     &kp FSLH
-                           &kp ESC     &lt 3 BKSP  &kp TAB  &lt 4 RET  &lt 2 SPC   &kp DEL
+   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P
+   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI
+   &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
+          &kp LGUI &mo 1 &kp LSHFT &kp SPACE &mo 2 &kp RALT
                         >;
                 };
-                num_layer {
-                        bindings = <
-   &kp LBKT  &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp RBKT  &kp PRSC  &trans      &trans        &trans        &trans
-   &kp SCLN  &kp NUM_4  &kp NUM_5  &kp NUM_6  &kp EQL   &trans    &kp RSFT    &kp RCTL      &kp RALT      &kp RGUI
-   &kp GRAV  &kp NUM_1  &kp NUM_2  &kp NUM_1  &kp BSLH  &trans    &trans      &trans        &trans        &trans
-                        &trans     &trans     &trans    &trans    &trans      &trans
-                        >;
-                };
-
                 nav_layer {
+// -----------------------------------------------------------------------------------------
+// |BTCLR|     | ESC |  ~   |     |   | TAB | HOME |  UP  | END | DEL  |
+// | BT1 | GUI | ALT | CTRL | NUM |   |  /  | LEFT | DOWN | RGT | BKSP |
+// | BT2 |     |     |      |     |   |  \  | ENT  |      |     |      |
+//             |     |      |     |   |     |      |      |
                         bindings = <
-   &trans    &trans    &trans    &trans    &trans  &kp PRSC  &kp M_NEXT  &kp M_VOLD  &kp M_VOLU  &kp M_PLAY
-   &kp LGUI  &kp LALT  &kp LCTL  &kp LSFT  &trans  &trans    &kp LARW    &kp DARW    &kp UARW    &kp RARW
-   &trans    &trans    &trans    &trans    &trans  &trans    &kp HOME    &kp PGUP    &kp PGDN    &kp END
-                       &trans    &trans    &trans  &trans    &trans      &trans
+   &bt BT_CLR   &trans      &kp ESC  &kp TILDE &trans     &kp TAB  &kp HOME &kp UP   &kp END   &kp DEL
+   &bt BT_SEL 0 &kp K_CMENU &kp RALT &kp LCTRL &mo 3      &kp FSLH &kp LEFT &kp DOWN &kp RIGHT &kp BSPC
+   &bt BT_SEL 1 &trans      &trans   &trans    &trans     &kp BSLH &kp RET  &trans   &trans    &trans
+                            &trans   &trans    &trans     &trans   &trans   &trans
                         >;
                 };
 
-                fun_layer {
+                sym_layer {
+// -----------------------------------------------------------------------------------------
+// |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
+// |     |     |     |     |     |   |  -  |  =  |  {  |  }  | "|" |
+// |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |
+//             | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp F12  &kp F7  &kp F8  &kp F9  &trans  &kp PRSC  &trans    &trans    &trans    &trans
-   &kp F11  &kp F4  &kp F5  &kp F6  &trans  &trans    &kp RSFT  &kp RCTL  &kp RALT  &kp RGUI
-   &kp F10  &kp F1  &kp F2  &kp F3  &trans  &trans    &trans    &trans    &trans    &trans
-                    &trans  &trans  &trans  &trans    &trans    &trans
+   &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR
+   &trans    &trans    &trans    &trans    &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp PIPE
+   &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans          &trans   &kp BSLH
+                       &kp LGUI  &trans    &kp SPACE   &kp RET   &trans    &kp RALT
+                        >;
+                };
+
+// This layer is unreachable until "tri layer state" is sorted out.
+// Leaving it here for completeness.
+                num_layer {
+// -----------------------------------------------------------------------------------------
+// |     |     |     |     |     |   |  A  |  7  |  8  |  9  |  D  |
+// |     |     |     |     |     |   |  B  |  4  |  5  |  6  |  E  |
+// |     |     |     |     |     |   |  C  |  1  |  2  |  3  |  F  |
+//             |     |     |     |   |  0  |  .  |     |
+                        bindings = <
+   &trans &trans &trans &trans &trans    &kp A  &kp N7  &kp N8 &kp N9 &kp D
+   &trans &trans &trans &trans &trans    &kp B  &kp N4  &kp N5 &kp N6 &kp E
+   &trans &trans &trans &trans &trans    &kp C  &kp N1  &kp N2 &kp N3 &kp F
+                 &trans &trans &trans    &kp N0 &kp DOT &trans
                         >;
                 };
         };
